@@ -14,6 +14,7 @@ export class TodoComponent implements OnInit {
 
   tasks: tasks [] = [];
   inProgress: tasks [] = [];
+  done: tasks[] = [];
 
 
 
@@ -31,6 +32,21 @@ export class TodoComponent implements OnInit {
       item: ['' ,Validators.required]
     })
   }
+
+
+  addTask(){
+    this.tasks.push({
+      description:this.todoForm.value.item,
+      done: false
+    })
+  }
+
+  deleteTask(){
+    
+  }
+
+
+
 
 
   drop(event: CdkDragDrop<tasks[]>) {
