@@ -16,7 +16,8 @@ export class TodoComponent implements OnInit {
   inProgress: tasks [] = [];
   done: tasks[] = [];
 
-
+  updateIndex!:any;
+  isEditable: boolean = false;
 
 
 
@@ -38,11 +39,34 @@ export class TodoComponent implements OnInit {
     this.tasks.push({
       description:this.todoForm.value.item,
       done: false
-    })
+    });
+    this.todoForm.reset();
   }
 
-  deleteTask(){
-    
+  deleteTask(i: number){
+    this.tasks.splice(i, 1);
+  }
+
+  deleteinProgress(i: number){
+    this.inProgress.splice(i, 1);
+  }
+
+  deleteDone(i: number){
+    this.done.splice(i, 1);
+  }
+
+  updateTask(item: tasks, i: number){
+    this.todoForm.controls['item'].setValue(item.description);
+    this.updateIndex = i;
+    this.isEditable = true;
+  }
+
+  update(){
+    this.tasks[this.updateIndex].description = this.todoForm.value.item;
+    this.tasks[this.updateIndex].done = false;
+    this.todoForm.reset();
+    this.updateIndex = undefined;
+    this.isEditable = false;
   }
 
 
