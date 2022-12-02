@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600&display=swap');
 
 .main-nav{
-  background: linear-gradient(to left,#cc99ff,#ff99cc);
+  background: linear-gradient(to right,#cc99ff,#ff99cc);
 }
 
 .main-nav h1{
