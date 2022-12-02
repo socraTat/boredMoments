@@ -11,13 +11,43 @@
               <mat-hint>Add Task Name</mat-hint>
               
             </mat-form-field>
-            <button class="matformbtn" mat-raised-button>Add</button>
+            <button class="matformbtn" mat-raised-button [disabled]="todoForm.invalid">Add</button> 
           </form>
         </mat-card>
       </div>
 
     </div>
 
-    <div class="col-md-9"></div>
+    <div class="col-md-9">
+      <div cdkDropListGroup> 
+        <div class="row">
+          <div class="col-md-4">
+            <!--For To DO-->
+            <div class="example-container">
+              <h2>To do</h2>
+          
+              <div
+                cdkDropList
+                [cdkDropListData]="tasks"
+                class="example-list"
+                (cdkDropListDropped)="drop($event)">
+                <div class="example-box" *ngFor="let item of tasks" cdkDrag>{{item}}</div>
+              </div>
+            </div>
+
+
+          </div>
+
+          <div class="col-md-4">
+            <!--For In Progress-->
+          </div>
+          <div class="col-md-4">
+            <!--For Done-->
+
+          </div>
+          
+        </div>
+      </div>
+    </div>
   </div>
 </div>
