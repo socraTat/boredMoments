@@ -16,6 +16,9 @@ import {MatButtonModule} from '@angular/material/button';
 
 import { ReactiveFormsModule } from '@angular/forms';
 
+import {DragDropModule} from '@angular/cdk/drag-drop';
+
+
 
 
 
@@ -38,7 +41,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     MatInputModule,
     MatIconModule,
     MatButtonModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    DragDropModule
     
   ],
   providers: [],
