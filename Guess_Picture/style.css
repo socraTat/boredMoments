@@ -1,0 +1,40 @@
+@import url("https://fonts.googleapis.com/css2?family=Prosto+One&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  height: 500px;
+}
+
+body {
+  font-family: "Prosto One";
+}
+
+.title {
+  text-align: center;
+}
+
+.middle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bottom-div {
+  text-align: center;
+}
+
+.input {
+  border-radius: 7px;
+  width: 100;
+  padding: 7px;
+}
+
+.btn {
+  border-radius: 5px;
+  padding: 7px;
+  background-color: aliceblue;
+}
